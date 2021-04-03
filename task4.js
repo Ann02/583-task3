@@ -5,3 +5,4 @@ function multiplication(x, y) {
 let x = prompt('Введіть число ');  x = Number(x);
 let y = prompt('Введіть степінь ');  y = Number(y);
 multiplication(x, y);
+//raiseToDegree(3, 4);
