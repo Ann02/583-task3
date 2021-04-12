@@ -1,10 +1,10 @@
-var arr = [];
-    for(var i=0; i < 5; i++) {
-
-        arr[i] = prompt('Введіть '); 
+function findMin() {
+let min = arguments[0];
+for (let index = 0; index < arguments.length; index++) {
+    if (min > arguments[index]) {
+        min = arguments[index];
     }
-function findMin(){
-  var y = Math.min(arr);
-  console.log(y);
 }
-findMin()
+return min;
+}
+console.log(findMin(0, -1, 5, -2, 3));
