@@ -1,17 +1,21 @@
-var a = [];
-var cout = prompt('a');
-function getRandomArbitary(min, max){
-  return Math.random()*(max - min) + min;
+let min = 1;
+let max = 500;
+
+let array = [];
+
+function randArray(k) {
+  for (let index = 0; index < k; index++) {
+    array[index] = (function (x, y) {
+      return Math.floor(Math.random() * x) + y;
+    })(max, min);
+  }
 }
-function searchRandom(){
-  var rdm = Math.floor(getRandomArbitary(1, 500));
-  for (var i = 0; i < a.length; i++){
-      if(rdm == a[i]){
-      searchRandom();
-      }
+
+const size = prompt("Enter the array size");
+
+randArray(size);
+
+for (let index = 0; index < array.length; index++) {
+  console.log(array[index]);
 }
-a.push(rdm);
-}for (var i = 0; i < count; i++){
-  searchRandom();
-}
-console.log(a);
+
